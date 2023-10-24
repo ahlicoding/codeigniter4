@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use Codeigniter;
 
 class Home extends BaseController
 {
@@ -8,4 +9,13 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+
+    public function phpversion()
+    {
+        echo 'PHP version: ' . phpversion() . ' , Codeigniter Version: ' .
+         CodeIgniter\CodeIgniter::CI_VERSION.' -- ENVIRONTMENT:'.env('CI_ENVIRONMENT');
+    }
+
+
+    
 }
